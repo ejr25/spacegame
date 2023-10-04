@@ -1,0 +1,94 @@
+body {
+  background-color: pink;
+}
+
+h1 {
+  color: #8f1d29;
+}
+h2 {
+  color: #f7d7e2;
+}
+p#summary {
+  color: #5c121a;
+}
+ul#labs-list {
+  color: #f7d7e2;
+}
+
+a#ee1:link {
+  text-decoration: none;
+  color: #5c121a;
+}
+a#ee1:visited {
+  text-decoration: none;
+  color: #5c121a;
+}
+a#ee1:hover {
+  text-decoration: none;
+  color: #8f1d29;
+}
+a#ee1:active {
+  text-decoration: none;
+  color: #5c121a;
+}
+
+
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+ color: pink;
+}
+a:hover {
+  text-decoration: none;
+  color: #4f0202;
+}
+a:active { text-decoration: none; }
+
+
+
+#lorem-para {
+  background-color: #f0e6fc;
+  padding: 20px;
+  margin: 10px;
+  border: solid 10px black;
+  border-radius: 20px;
+}
+
+#my-portrait {
+    width: 400px;
+    border-radius: 25px;
+    margin: 25px;
+}
+
+#intro {
+  background-color: #fae6ed;
+  padding: 10px;
+  border: solid 3px #f7d7e2;
+  border-radius: 25px;
+  margin: 25px;
+}
+
+#labs {
+  background-color: #8f1d29;
+  padding: 10px;
+  border: solid 3px #5c121a;
+  border-radius: 25px;
+  margin: 25px;
+}
+
+
+/* COLS CSS */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

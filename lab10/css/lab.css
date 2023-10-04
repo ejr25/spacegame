@@ -1,0 +1,69 @@
+#output {
+  background-color: white;
+}
+
+body {
+  background-color: #122f5e;
+}
+h1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: black;
+}
+
+h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: black
+}
+
+h3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: black
+}
+
+p {
+  color: black
+}
+
+#body {
+  margin: 10px;
+  padding: 50px;
+  border-style: dotted;
+  border-color: #122f5e;
+  border-width: thick;
+  background-color: white;
+}
+
+
+#back-home {
+  background-color: #8f1a06;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 50px;
+}
+
+#sect-1 {
+  background-color: #ebf2ff;
+  padding: 10px;
+  border-style: groove;
+  border-width: 10px;
+  border-color: #95a9c9;
+  margin-bottom: 15px;
+}
+
+#sect-2 {
+  background-color: #ffefeb;
+  padding: 10px;
+  border-style: groove;
+  border-width: 10px;
+  border-color: #f7b297;
+  margin-bottom: 15px;
+}
+
+#sect-3 {
+  background-color: #edffeb;
+  padding: 10px;
+  border-style: groove;
+  border-width: 10px;
+  border-color: #a6c995;
+  margin-bottom: 15px;
+}
