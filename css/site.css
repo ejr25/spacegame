@@ -1,5 +1,5 @@
 body {
-  background-color: navy;
+  background-color: #c2c2c2;
 }
 
 p {
@@ -9,11 +9,10 @@ p {
 h2 {
   color: yellow;
 }
-#main-block {
-  background-color: #black;
-  padding: 10px;
-  border-style: dashed;
-  border-width: 10px
-  border-color: black;
-  margin-bottom: 15px;
+
+#game-screen-wrapper {
+  background-color: #0e1e4f;
+  width: 700px;
+  height:700px;
+  margin: 100px auto;
 }
