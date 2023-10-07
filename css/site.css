@@ -16,3 +16,12 @@ h2 {
   height:700px;
   margin: 100px auto;
 }
+
+#game-screen {
+  width: 100%;
+}
+
+#btn-start {
+  width: 125px;
+  height: 50px;
+}
