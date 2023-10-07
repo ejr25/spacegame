@@ -20,6 +20,8 @@ h1, h2 {
 
 #game-screen {
   width: 100%;
+  background:#0e1e4f url("img/700-star-bg.png");
+
 }
 
 #btn-start {
