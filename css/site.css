@@ -21,8 +21,9 @@ h1, h2 {
 #game-screen {
   width: 700px;
   height: 700px;
-  background: url("/img/700-star-bg.png") 0 0;
+  background: url("https://ejr25.github.io/img/700-star-bg.png") 0 0;
 }
+
 
 #btn-start {
   width: 125px;
