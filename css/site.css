@@ -21,7 +21,7 @@ h1, h2 {
 #game-screen {
   width: 700px;
   height: 700px;
-  background:#0e1e4f url("img/700-star-bg.png");
+  background: url("/img/700-star-bg.png") 0 0;
 }
 
 #btn-start {
