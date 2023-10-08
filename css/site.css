@@ -1,10 +1,38 @@
+
+/*
+COLORS
+
+1 darker yellow = #fff7bd
+2 light yellow = #fffded
+3 lightest blue = #dae1f5
+4 light-mid blue = #b2bddb
+5 dark- mid blue = #8d9bc2
+6 dark blue = #1d2e63
+7 BG blue = #0e1e4f
+8 darkest blue = #031038
+
+
+
+*/
+
+
+
 @font-face {
   font-family: dogica;
   src: url(dogica.ttf);
 }
 
+@font-face {
+  font-family: dogicabold;
+  src: url(dogicabold.ttf);
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   background-color: #c2c2c2;
+  font-family: dogica;
 }
 
 p {
@@ -13,33 +41,99 @@ p {
 
 h1 {
   color: yellow;
-  font-family: dogica, Helvetica, Arial;
+  font-family: dogica;
   font-size: 25px;
 }
 
+#welcome {
+  /* margin-top: 200px; */
+  color: #dae1f5;
+  font-family: dogica;
+}
+
+#welcome-title {
+  font-size: 25px;
+  padding-top: 15px;
+  color: #fff7bd;
+  font-family: dogicabold;
+
+}
+
+
 h2 {
   color: yellow;
-  font-family: dogica, Helvetica, Arial;
   font-size: 30px;
 }
 
 
-#game-screen-wrapper {
-  background-color: #0e1e4f;
+.game-screen-wrapper {
   width: 700px;
   height:700px;
-  margin: 100px auto;
+  background-image: url("https://ejr25.github.io/spacegame/img/700-star-bg.png");
+  margin: 10px auto;
   text-align: center;
 }
 
-#game-screen {
-  width: 700px;
-  height: 700px;
-  background-image: url("https://ejr25.github.io/spacegame/img/700-star-bg.png");
+.game-screen-wrapper.nobg {
+  background-image: none;
+  background-color: #0e1e4f;
 }
 
+.game-screen {
+  height: 660px;
+  padding: 20px;
+}
+
+.img-container {
+  width: 100%;
+
+}
+
+.img-container a {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.img-container img {
+  width: 200px;
+  height: 300px;
+
+}
+
+.img-container img:hover {
+  opacity: 0.5;
+}
+
+#about {
+  margin: 50px auto;
+}
 
 #btn-start {
   width: 125px;
+  height: 30px;
+}
+
+#btn-start span {
+  display: none;
+}
+
+.button {
+  color: #0e1e4f;
+  font-size: 20px;
+  margin: 100px auto;
+  text-decoration: none;
+  
+  display: inline-block;
+  padding:10px;
   height: 50px;
+  background-color: #fff2a0;
+  border: 2px solid #031038;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.button:hover {
+  background-color: #efdf79;
 }
