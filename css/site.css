@@ -167,7 +167,7 @@ a.button:hover {
 }
 
 #canvas-cassiopeia {
-  background-image: url("/img/cassiopeia-canvas.png");
+  background-image: url("../img/cassiopeia-canvas.png");
   height: 500px;
 }
 
