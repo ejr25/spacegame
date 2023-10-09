@@ -10,9 +10,6 @@ COLORS
 6 dark blue = #1d2e63
 7 BG blue = #0e1e4f
 8 darkest blue = #031038
-
-
-
 */
 
 
@@ -136,4 +133,15 @@ h2 {
 
 .button:hover {
   background-color: #efdf79;
+}
+
+.draw-container {
+  background-color: #8d9bc2;
+  width: 500px;
+  height: 500px;
+}
+
+#canvas-cassiopeia {
+  background-image: url("/img/cassiopeia-canvas.png");
+  height: 500px;
 }
