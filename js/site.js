@@ -5,10 +5,8 @@
 
 const canvas = document.getElementById("canvas-cassiopeia");
 const btnClear = document.getElementById("clear");
-// const btnBack = document.getElementById("back");
-
-
 const ctx = canvas.getContext("2d");
+const inputName = document.getElementById("new-name");
 
 
 
@@ -20,6 +18,7 @@ canvas.height = 500;
 canvas.addEventListener('mousedown', beginDraw);
 canvas.addEventListener('mouseup', endDraw);
 btnClear.addEventListener('click', clearCanvas);
+// inputName.addEventListener()
 // btnBack.addEventListener('click', switchPage("pick-constellation.html"));
 
 
@@ -48,7 +47,7 @@ function clearCanvas() {
 }
 
 
-
+// constellation name change
 
 
 
