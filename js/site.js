@@ -4,6 +4,10 @@
 
 
 const canvas = document.getElementById("canvas-cassiopeia");
+const btnClear = document.getElementById("clear");
+// const btnBack = document.getElementById("back");
+
+
 const ctx = canvas.getContext("2d");
 
 
@@ -15,6 +19,10 @@ canvas.height = 500;
   
 canvas.addEventListener('mousedown', beginDraw);
 canvas.addEventListener('mouseup', endDraw);
+btnClear.addEventListener('click', clearCanvas);
+// btnBack.addEventListener('click', switchPage("pick-constellation.html"));
+
+
 
 ctx.lineCap = 'round';
 ctx.lineWidth = 4;
@@ -34,6 +42,10 @@ function endDraw(e) {
     ctx.stroke();
 }
 
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 
 

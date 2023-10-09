@@ -11,21 +11,29 @@
 
 		<div class="game-screen-wrapper nobg">
 			<div class="game-screen" >
-				<p>cassiopeia</p>
+				<h3>Cassiopeia</h3>
+				<p id="draw-instructions">Redesign the stars! To draw, click and hold, drag and release.</p>
+				<div id="page-contents">
+					<canvas class="draw-container" id="canvas-cassiopeia"></canvas>
+					<div id="buttons">
+						<a class="small-button" href="pick-constellation.html">BACK</a>
+						<a class="small-button" id="clear">CLEAR</a>
+					</div>
+					<form>
+						<label for="new-name">Name Your Constellation:</label>
+						<input type="text" id="new-name">
+						<a class="small-button" id="submit">SUBMIT</a>
+					</form>
 
-				<canvas class="draw-container" id="canvas-cassiopeia"></canvas>
-
+				</div>
 			</div>
 
-			<button id="clear">Clear</button>
 
 
 
 
 
-
-
-
+<!----------------------------------------------------------------------------------------------------------------------->
 			<div id="about">
 				<h2>About the Game</h2>
 				<p>This game is...</p>

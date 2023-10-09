@@ -13,7 +13,7 @@ COLORS
 */
 
 
-
+/* importing fonts */
 @font-face {
   font-family: dogica;
   src: url(dogica.ttf);
@@ -24,43 +24,69 @@ COLORS
   src: url(dogicabold.ttf);
 }
 
+
+/* body = whole html page (gray bg included) */
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #c2c2c2;
+  background-color: #031038;
   font-family: dogica;
 }
 
+
+/* ABOUT SECTION; p, h2 */
 p {
-  color: white;
+  font-size: 12px;
+  color: #fffded;
+  line-height: 25px;
+  margin-top: 0;
 }
+
+ul {
+  font-size: 12px;
+  color: #fffded;
+  align-items: left;
+  line-height: 25px;
+}
+
+h2 {
+  color: #fff7bd;
+  font-size: 25px;
+  font-family: dogicabold;
+}
+
+/* INDEX.HTML */
+#welcome /* "Welcome To" */ { 
+  /* margin-top: 200px; */
+  color: #dae1f5;
+  font-family: dogica;
+  font-size: 20px;
+}
+#welcome-title /* "Constellation Creator" */ {
+  font-size: 25px;
+  padding-top: 20px;
+  color: #fff7bd;
+  font-family: dogicabold;
+}
+
 
 h1 {
   color: yellow;
   font-family: dogica;
   font-size: 25px;
-}
-
-#welcome {
-  /* margin-top: 200px; */
-  color: #dae1f5;
-  font-family: dogica;
-}
-
-#welcome-title {
-  font-size: 25px;
-  padding-top: 15px;
-  color: #fff7bd;
-  font-family: dogicabold;
-
+  margin-top: 250px;
 }
 
 
-h2 {
-  color: yellow;
-  font-size: 30px;
+/* INTRO.HTML; h1#rule, */
+#rule {
+  color: #fffded;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 250px;
 }
+
 
 
 .game-screen-wrapper {
@@ -93,8 +119,8 @@ h2 {
 }
 
 .img-container img {
-  width: 200px;
-  height: 300px;
+  width: 190px;
+  height: 280px;
 
 }
 
@@ -115,23 +141,22 @@ h2 {
   display: none;
 }
 
-.button {
+a.button {
   color: #0e1e4f;
   font-size: 20px;
-  margin: 100px auto;
+  margin: 10px auto;
   text-decoration: none;
-  
   display: inline-block;
-  padding:10px;
-  height: 50px;
+  padding: 10px;
+  height: 30px;
   background-color: #fff2a0;
   border: 2px solid #031038;
   border-radius: 3px;
   text-align: center;
-  line-height: 50px;
+  line-height: 30px;
 }
 
-.button:hover {
+a.button:hover {
   background-color: #efdf79;
 }
 
@@ -145,3 +170,81 @@ h2 {
   background-image: url("/img/cassiopeia-canvas.png");
   height: 500px;
 }
+
+h3 {
+  font-size: 25px;
+  color: #fffded;
+  font-family: dogicabold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button#clear {
+  display: block;
+}
+
+#page-contents {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+a.small-button {
+  color: #0e1e4f;
+  font-size: 15px;
+  margin: 10px auto;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  height: 15px;
+  background-color: #fff2a0;
+  border: 2px solid #031038;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 15px;
+}
+
+a.small-button:hover {
+  background-color: #efdf79;
+  cursor: pointer;
+}
+
+#draw-instructions {
+  font-size: 10px;
+}
+
+label {
+  font-size: 10px;
+  color: #fffded;
+}
+
+a.small-button#submit {
+  display: inline;
+  font-size: 12px;
+}
+
+input {
+  width: 100px;
+}
+/* button {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color:hsl(225, 43%, 46%);
+  outline:none;
+  border:  1px solid #fff;
+  cursor: pointer;
+}
+button:hover {
+  background-color:#4962b0;
+} */
