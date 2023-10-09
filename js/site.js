@@ -1,11 +1,13 @@
-// class="draw-container" id="canvas-cassiopeia"
+// list of html classes/ids
+    // class="draw-container" id="canvas-cassiopeia"
+
+
 
 const canvas = document.getElementById("canvas-cassiopeia");
 const ctx = canvas.getContext("2d");
 
 
-// const canvasOffsetX = canvas.offsetLeft;
-// const canvasOffsetY = canvas.offsetTop;  
+
 
 canvas.width = 500;
 canvas.height = 500;
