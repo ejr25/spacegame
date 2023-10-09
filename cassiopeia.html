@@ -48,7 +48,38 @@
 
 	</main>
 
-	<script src="js/site.js" type="text/js"></script>
+	<script>
+		const canvas = document.getElementById("canvas-cassiopeia");
+		const btnClear = document.getElementById("clear");
+		const ctx = canvas.getContext("2d");
+		//const inputName = document.getElementById("new-name");
+
+		canvas.width = 500;
+		canvas.height = 500;
+
+		canvas.addEventListener('mousedown', beginDraw);
+		canvas.addEventListener('mouseup', endDraw);
+		btnClear.addEventListener('click', clearCanvas);
+		// inputName.addEventListener()
+
+		ctx.lineCap = 'round';
+		ctx.lineWidth = 4;
+		ctx.strokeStyle = "#000";
+
+		function beginDraw(e) {
+			ctx.beginPath();
+			ctx.moveTo(e.offsetX, e.offsetY);
+		}
+
+		function endDraw(e) {
+			ctx.lineTo(e.offsetX, e.offsetY);
+			ctx.stroke();
+		}
+
+		function clearCanvas() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	</script>
 </body>
 
 </html>
