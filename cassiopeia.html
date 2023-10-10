@@ -10,8 +10,9 @@
 	<main>
 
 		<div class="game-screen-wrapper nobg">
+
 			<div class="game-screen" >
-				<h3>Cassiopeia</h3>
+				<h3 id="cassiopeia-header">Cassiopeia</h3>
 				<p id="draw-instructions">Redesign the stars! To draw, click and hold, drag and release.</p>
 				<div id="page-contents">
 					<canvas class="draw-container" id="canvas-cassiopeia"></canvas>
@@ -20,20 +21,14 @@
 						<a class="small-button" id="clear">CLEAR</a>
 					</div>
 					<form>
-						<label for="new-name">Name Your Constellation:</label>
-						<input type="text" id="new-name">
+						<label for="users-form-input">Name Your Constellation:</label>
+						<input type="text" id="users-form-input">
 						<a class="small-button" id="submit">SUBMIT</a>
 					</form>
 
 				</div>
 			</div>
 
-
-
-
-
-
-<!----------------------------------------------------------------------------------------------------------------------->
 			<div id="about">
 				<h2>About the Game</h2>
 				<p>This game is...</p>
@@ -52,15 +47,19 @@
 		const canvas = document.getElementById("canvas-cassiopeia");
 		const btnClear = document.getElementById("clear");
 		const ctx = canvas.getContext("2d");
-		//const inputName = document.getElementById("new-name");
+		const inputName = document.getElementById("users-form-input");
+		const usersFormInput = document.querySelector("form");
+
+		console.log("form", usersFormInput);
 
 		canvas.width = 500;
 		canvas.height = 500;
 
 		canvas.addEventListener('mousedown', beginDraw);
 		canvas.addEventListener('mouseup', endDraw);
-		btnClear.addEventListener('click', clearCanvas);
-		// inputName.addEventListener()
+		btnClear.addEventListener("click", clearCanvas);
+		//inputName.addEventListener("input", displayNewName);
+		usersFormInput.addEventListener("submit", displayNewName)
 
 		ctx.lineCap = 'round';
 		ctx.lineWidth = 4;
@@ -79,6 +78,23 @@
 		function clearCanvas() {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 		}
+
+		function displayNewName(e) {
+			e.preventDefault();
+			console.log("Form submitted");
+			
+			// Check if inputName is correctly referencing the input element
+			console.log("inputName element:", inputName);
+
+			let name = inputName.value;
+			console.log("inputName value=", name);
+
+			const cassiopeiaReplacement = document.getElementById('cassiopeia-header');
+			console.log("cassiopeiaReplacement element:", cassiopeiaReplacement);
+
+			cassiopeiaReplacement.innerHTML = name;
+		}
+
 	</script>
 </body>
 
