@@ -14,7 +14,7 @@ const inputName = document.getElementById("new-name");
 canvas.width = 500;
 canvas.height = 500;
 
-  
+
 canvas.addEventListener('mousedown', beginDraw);
 canvas.addEventListener('mouseup', endDraw);
 btnClear.addEventListener('click', clearCanvas);

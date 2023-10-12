@@ -171,6 +171,11 @@ a.button:hover {
   height: 500px;
 }
 
+#canvas-ursamajor {
+  background-image: url("../img/ursamajor-canvas.png");
+  height: 500px;
+}
+
 h3 {
   font-size: 25px;
   color: #fffded;

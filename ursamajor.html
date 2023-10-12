@@ -10,12 +10,23 @@
 	<main>
 
 		<div class="game-screen-wrapper nobg">
-			<div class="game-screen">
-				<p>ursa major</p>
 
+			<div class="game-screen" >
+				<h3 id="ursamajor-header">Ursa Major</h3>
+				<p id="draw-instructions">Redesign the stars! To draw, click and hold, drag and release.</p>
+				<div id="page-contents">
+					<canvas class="draw-container" id="canvas-ursamajor"></canvas>
+					<div id="buttons">
+						<a class="small-button" href="pick-constellation.html">BACK</a>
+						<a class="small-button" id="clear">CLEAR</a>
+					</div>
+					<form>
+						<label for="users-form-input">Name Your Constellation:</label>
+						<input type="text" id="users-form-input">
+						<input type="submit" value="submit">
+					</form>
 
-					<canvas id="lineCanvas" width="600" height="400"></canvas>
-					<button id="clearButton">Clear</button>				
+				</div>
 			</div>
 
 			<div id="about">
@@ -31,7 +42,60 @@
 
 
 	</main>
-	<script src="/js/site.js"></script>
+
+	<script>
+		const canvas = document.getElementById("canvas-ursamajor");
+		const btnClear = document.getElementById("clear");
+		const ctx = canvas.getContext("2d");
+		const inputName = document.getElementById("users-form-input");
+		const usersFormInput = document.querySelector("form");
+
+		console.log("form", usersFormInput);
+
+		canvas.width = 500;
+		canvas.height = 500;
+
+		canvas.addEventListener('mousedown', beginDraw);
+		canvas.addEventListener('mouseup', endDraw);
+		btnClear.addEventListener("click", clearCanvas);
+		//inputName.addEventListener("input", displayNewName);
+		usersFormInput.addEventListener("submit", displayNewName)
+
+		ctx.lineCap = 'round';
+		ctx.lineWidth = 4;
+		ctx.strokeStyle = "#000";
+
+		function beginDraw(e) {
+			ctx.beginPath();
+			ctx.moveTo(e.offsetX, e.offsetY);
+		}
+
+		function endDraw(e) {
+			ctx.lineTo(e.offsetX, e.offsetY);
+			ctx.stroke();
+		}
+
+		function clearCanvas() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
+
+		function displayNewName(e) {
+			e.preventDefault();
+			console.log("Form submitted");
+			
+			// Check if inputName is correctly referencing the input element
+			console.log("inputName element:", inputName);
+
+			let name = inputName.value;
+			console.log("inputName value=", name);
+
+			const ursamajorReplacement = document.getElementById('ursamajor-header');
+			console.log("ursamajorReplacement element:", ursamajorReplacement);
+
+			ursamajorReplacement.innerHTML = name;
+		}
+
+	</script>
 </body>
 
 </html>
