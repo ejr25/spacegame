@@ -165,7 +165,7 @@ a.button:hover {
   width: 500px;
   height: 500px;
 }
-
+/* CANVAS  */
 #canvas-cassiopeia {
   background-image: url("../img/cassiopeia-canvas.png");
   height: 500px;
@@ -175,6 +175,28 @@ a.button:hover {
   background-image: url("../img/ursamajor-canvas.png");
   height: 500px;
 }
+
+#canvas-ursaminor {
+  background-image: url("../img/ursaminor-canvas.png");
+  height: 500px;
+}
+
+#canvas-draco {
+  background-image: url("../img/draco-canvas.png");
+  height: 500px;
+}
+
+#canvas-cepheus {
+  background-image: url("../img/cepheus-canvas.png");
+  height: 500px;
+}
+
+#canvas-camelopardalis {
+  background-image: url("../img/camelopardalis-canvas.png");
+  height: 500px;
+}
+
+
 
 h3 {
   font-size: 25px;

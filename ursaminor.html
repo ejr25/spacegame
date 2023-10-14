@@ -10,19 +10,47 @@
 	<main>
 
 		<div class="game-screen-wrapper nobg">
-			<div class="game-screen">
-				<p>ursa minor</p>
-
-
-
+			<div class="game-screen" >
+				<h3 id="ursaminor-header">Ursa Minor</h3>
+				<p id="draw-instructions">Redesign the stars! To draw, click and hold, drag and release.</p>
+				
+				<div id="page-contents">
+					<canvas class="draw-container" id="canvas-ursaminor"></canvas>
+					<div id="buttons">
+						<a class="small-button" href="pick-constellation.html">BACK</a>
+						<a class="small-button" id="clear">CLEAR</a>
+					</div>
+					<form>
+						<label for="users-form-input">Name Your Constellation:</label>
+						<input type="text" id="users-form-input">
+						<input type="submit" value="submit">
+					</form>
+				</div>
 			</div>
 
 
 			<div id="about">
 				<h2>About the Game</h2>
-				<p>This game is...</p>
+				<p>This game is for my very first assignment in my senior game design class, ARTG170. It is part of an anthology of games inspired by the Fluxus Art Tradition. My team chose the theme space, and took inspiration from Grapefruit by Yoko Ono. I wanted this game to require players to interact with the real world, and follow directions.</p>
 				<h2>About the Author</h2>
-				<p>Emma created this for her senior project...</p>
+				<p>My name is Emma Radichkova and this is the very first game I created on my own game and the first time I've had to write code for a video game.</p>
+				<h2>Credits: Images</h2>
+				<ul>
+					<li>Ursa Major By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20042019</li>
+					<li>Ursa Minor By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20042054</li>
+					<li>Draco By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20041478</li>
+					<li>Cepheus By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20041245</li>
+					<li>Cassiopeia By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20041215</li>
+					<li>Camelopardalis By Till Credner - Own work: AlltheSky.com, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20041092</li>
+				</ul>
+				<h2>Art</h2>
+				<p>Art was made by me, Emma Radichkova, using https://www.pixilart.com/.</p>
+				<h2>Coding Help</h2>
+				<p>Special thanks to creators who uploded the following YouTube videos</p>
+				<ul>
+					<li>https://youtu.be/mRDo-QXVUv8?si=1U-TqXk67rLuTwUP</li>
+					<li>https://youtu.be/-Guz9o-GiB0?si=okPXb46OQkd4r9IK</li>
+				</ul>
 			</div>
 	
 		</div>
@@ -31,6 +59,59 @@
 
 
 	</main>
+	<script>
+		const canvas = document.getElementById("canvas-ursaminor");
+		const btnClear = document.getElementById("clear");
+		const ctx = canvas.getContext("2d");
+		const inputName = document.getElementById("users-form-input");
+		const usersFormInput = document.querySelector("form");
+
+		console.log("form", usersFormInput);
+
+		canvas.width = 500;
+		canvas.height = 500;
+
+		canvas.addEventListener('mousedown', beginDraw);
+		canvas.addEventListener('mouseup', endDraw);
+		btnClear.addEventListener("click", clearCanvas);
+		//inputName.addEventListener("input", displayNewName);
+		usersFormInput.addEventListener("submit", displayNewName)
+
+		ctx.lineCap = 'round';
+		ctx.lineWidth = 4;
+		ctx.strokeStyle = "#000";
+
+		function beginDraw(e) {
+			ctx.beginPath();
+			ctx.moveTo(e.offsetX, e.offsetY);
+		}
+
+		function endDraw(e) {
+			ctx.lineTo(e.offsetX, e.offsetY);
+			ctx.stroke();
+		}
+
+		function clearCanvas() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
+
+		function displayNewName(e) {
+			e.preventDefault();
+			console.log("Form submitted");
+			
+			// Check if inputName is correctly referencing the input element
+			console.log("inputName element:", inputName);
+
+			let name = inputName.value;
+			console.log("inputName value=", name);
+
+			const ursaminorReplacement = document.getElementById('ursaminor-header');
+			console.log("ursaminorReplacement element:", ursaminorReplacement);
+
+			ursaminorReplacement.innerHTML = name;
+		}
+
+	</script>
 </body>
 
 </html>
